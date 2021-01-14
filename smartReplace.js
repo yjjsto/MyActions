@@ -207,17 +207,17 @@ async function downloader_jd() {
     }
     if (remoteContent.indexOf("new Env('京喜农场')") > 0) {
         await download(
-            "https://github.com/lxk0301/jd_scripts/raw/master/jdJxncTokens.js",
+            "https://github.com/yjjsto/jd_scripts/raw/main/jdJxncTokens.js",
             "./jdJxncTokens.js",
             "京喜农场Token"
         );
         await download(
-            "https://github.com/lxk0301/jd_scripts/raw/master/jdJxncShareCodes.js",
+            "https://github.com/yjjsto/jd_scripts/raw/main/jdJxncShareCodes.js",
             "./jdJxncShareCodes.js",
             "京喜农场分享码"
         );
         await download(
-            "https://github.com/lxk0301/jd_scripts/raw/master/USER_AGENTS.js",
+            "https://github.com/yjjsto/jd_scripts/raw/main/USER_AGENTS.js",
             "./USER_AGENTS.js",
             "USER_AGENTS"
         );
@@ -225,11 +225,11 @@ async function downloader_jd() {
 }
 
 async function downloader_notify() {
-    await download("https://github.com/lxk0301/jd_scripts/raw/master/sendNotify.js", "./sendNotify.js", "统一通知");
+    await download("https://github.com/yjjsto/jd_scripts/raw/main/sendNotify.js", "./sendNotify.js", "统一通知");
 }
 
 async function downloader_user_agents() {
-    await download("https://github.com/lxk0301/jd_scripts/raw/master/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
+    await download("https://github.com/yjjsto/jd_scripts/raw/main/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
 }
 
 async function download(url, path, target) {
