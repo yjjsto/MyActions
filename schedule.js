@@ -2,23 +2,18 @@
     用于需要短时间多次运行的脚本执行
     会在任务结束前两分钟通过webhook的方式继续唤醒新的脚本以防止中断的情况出现
     理论上只需要手动运行一次即可长久地运行下去
-
     如果是直接运行远程的文件,则需要自行在对应yaml文件中配置对应的env参数
-
     请勿滥用,脚本暂未测试
 */
 
 /* 配套的yaml数据
-
 name: 自定义JOB执行
-
 on:
     workflow_dispatch:
     schedule:
         - cron: "30 15,7 * * *" #此处的运行需要提前在定时任务前
     repository_dispatch:
         types: schedule
-
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -64,9 +59,7 @@ jobs:
                   TRIGGER_KEYWORDS: ${{ secrets.TRIGGER_KEYWORDS }}
                   #CRONTAB
                   CRONTAB: ${{ '0 0 0,16 * * *' }} #定时在每天0和下午4点整执行一次
-                  SYNCURL: https://github.com/yjjsto/jd_scripts/raw/main/jd_joy_reward.js #此处填写你要执行的js
-
-
+                  SYNCURL: https://github.com/Choicc/MyActions/raw/main/scripts/jd_joy_reward.js #此处填写你要执行的js
  */
 
 const exec = require("child_process").execSync;
